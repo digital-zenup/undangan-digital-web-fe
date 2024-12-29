@@ -7,5 +7,5 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
 
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
 });

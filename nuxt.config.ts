@@ -13,5 +13,19 @@ export default defineNuxtConfig({
     viewer: false,
   },
 
+  googleFonts: {
+    families: {
+      Lato: [100, 300, 400, 700, 900],
+      "Libre Baskerville": {
+        wght: [400, 700],
+        ital: [400],
+      },
+      Montserrat: {
+        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        ital: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      },
+    },
+  },
+
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@vueuse/nuxt"],
 });

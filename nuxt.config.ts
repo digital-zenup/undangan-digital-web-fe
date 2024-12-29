@@ -27,5 +27,12 @@ export default defineNuxtConfig({
     },
   },
 
+  components: [
+    {
+      path: "~/components",
+      extensions: ["vue"],
+    },
+  ],
+
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@vueuse/nuxt"],
 });

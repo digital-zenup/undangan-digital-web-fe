@@ -7,9 +7,11 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
 
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/google-fonts",
-    "@vueuse/nuxt",
-  ],
+  tailwindcss: {
+    cssPath: ["~/assets/css/tailwind.css", { injectPosition: "first" }],
+    configPath: "~/tailwind.config.js",
+    viewer: false,
+  },
+
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@vueuse/nuxt"],
 });

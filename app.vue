@@ -1,9 +1,12 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+    <NuxtLayout>
+        <NuxtPage />
+    </NuxtLayout>
 
-  <Teleport to="#teleports">
-    <ui-v-toaster expand close-button />
-  </Teleport>
+    <Teleport to="#teleports">
+        <VToaster
+            expand
+            close-button
+        />
+    </Teleport>
 </template>

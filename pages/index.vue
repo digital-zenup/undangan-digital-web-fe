@@ -1,3 +1,8 @@
 <template>
-  <ui-v-text as="h1" variant="h1"> Hello, World! </ui-v-text>
+    <VText
+        as="h1"
+        variant="h1"
+    >
+        Hello, World!
+    </VText>
 </template>

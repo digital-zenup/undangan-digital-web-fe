@@ -1,3 +1,4 @@
-export type Hello = {
-    message: string;
+export type NavigationLink = {
+    name: string;
+    hrefName: string;
 };

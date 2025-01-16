@@ -1,17 +1,15 @@
 <script lang="ts" setup>
 import { type Props, textVariants } from '.';
 
-const props = withDefaults(defineProps<Props>(), {
-    bold: false,
-    italic: false,
-});
+const props = defineProps<Props>();
 
 const variant = computed(() =>
     cn(
         textVariants({
             variant: props.variant,
-            bold: props.bold,
-            italic: props.italic,
+            color: props.color,
+            leading: props.leading,
+            weight: props.weight,
         }),
         props.class,
     ),

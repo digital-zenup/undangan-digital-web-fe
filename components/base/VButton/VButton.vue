@@ -1,9 +1,7 @@
 <script lang="ts" setup>
 import { buttonVariants, type Props } from '.';
 
-const props = withDefaults(defineProps<Props>(), {
-    type: 'button',
-});
+const { type = 'button', ...props } = defineProps<Props>();
 
 const variant = computed(() =>
     cn(
@@ -12,6 +10,7 @@ const variant = computed(() =>
             size: props.size,
         }),
         props.class,
+        'font-semibold',
     ),
 );
 </script>

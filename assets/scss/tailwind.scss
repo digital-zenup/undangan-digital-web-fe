@@ -4,67 +4,89 @@
 
 @layer base {
     :root {
-        --background: 0 0% 100%;
-        --foreground: 222.2 84% 4.9%;
-
-        --muted: 210 40% 96.1%;
-        --muted-foreground: 215.4 16.3% 46.9%;
-
-        --popover: 0 0% 100%;
-        --popover-foreground: 222.2 84% 4.9%;
-
-        --card: 0 0% 100%;
-        --card-foreground: 222.2 84% 4.9%;
-
-        --border: 214.3 31.8% 91.4%;
-        --input: 214.3 31.8% 91.4%;
-
-        --primary: 222.2 47.4% 11.2%;
-        --primary-foreground: 210 40% 98%;
-
-        --secondary: 210 40% 96.1%;
-        --secondary-foreground: 222.2 47.4% 11.2%;
-
-        --accent: 210 40% 96.1%;
-        --accent-foreground: 222.2 47.4% 11.2%;
-
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 210 40% 98%;
-
-        --ring: 222.2 84% 4.9%;
-
         --radius: 0.5rem;
-    }
 
-    .dark {
-        --background: 222.2 84% 4.9%;
-        --foreground: 210 40% 98%;
+        /* Utility Based */
+        --color-gray-50: #fafafa;
+        --color-gray-100: #f6f6f6;
+        --color-gray-150: #f1f1f1;
+        --color-gray-200: #ececec;
+        --color-gray-300: #e3e3e3;
+        --color-gray-400: #d9d9d9;
+        --color-gray-500: #d0d0d0;
+        --color-gray-600: #a6a6a6;
+        --color-gray-700: #7d7d7d;
+        --color-gray-800: #535353;
+        --color-gray-850: #3e3e3e;
+        --color-gray-900: #2a2a2a;
+        --color-gray-950: #151515;
 
-        --muted: 217.2 32.6% 17.5%;
-        --muted-foreground: 215 20.2% 65.1%;
+        --color-light-green-50: #f8faea;
+        --color-light-green-50: #f8faea;
+        --color-light-green-100: #f1f5d6;
+        --color-light-green-150: #e9f0c2;
+        --color-light-green-200: #e2ebad;
+        --color-light-green-300: #d4e184;
+        --color-light-green-400: #c5d75b;
+        --color-light-green-500: #b7cd32;
+        --color-light-green-600: #92a428;
+        --color-light-green-700: #637b1e;
+        --color-light-green-800: #495214;
+        --color-light-green-850: #373e0f;
+        --color-light-green-900: #25290a;
+        --color-light-green-950: #121505;
 
-        --popover: 222.2 84% 4.9%;
-        --popover-foreground: 210 40% 98%;
+        --color-gold-50: #fdfff6;
+        --color-gold-100: #e8e5cf;
+        --color-gold-150: #ddd8b6;
+        --color-gold-200: #d1cb9e;
+        --color-gold-300: #bbb06e;
+        --color-gold-400: #a4963d;
+        --color-gold-500: #8d7c0d;
+        --color-gold-600: #71630a;
+        --color-gold-700: #554a08;
+        --color-gold-800: #383205;
+        --color-gold-850: #2a2504;
+        --color-gold-900: #1c1903;
+        --color-gold-950: #0e0c01;
 
-        --card: 222.2 84% 4.9%;
-        --card-foreground: 210 40% 98%;
+        --vc-pgn-width: 8px;
+        --vc-pgn-height: 8px;
+        --vc-pgn-border-radius: 10px;
+        --vc-pgn-background-color: #ceddcf;
+        --vc-pgn-active-color: var(--color-gold-500);
 
-        --border: 217.2 32.6% 17.5%;
-        --input: 217.2 32.6% 17.5%;
+        /* Component Based */
+        --color-success: #3cae4d;
 
-        --primary: 210 40% 98%;
-        --primary-foreground: 222.2 47.4% 11.2%;
-
-        --secondary: 217.2 32.6% 17.5%;
-        --secondary-foreground: 210 40% 98%;
-
-        --accent: 217.2 32.6% 17.5%;
-        --accent-foreground: 210 40% 98%;
-
-        --destructive: 0 62.8% 30.6%;
-        --destructive-foreground: 210 40% 98%;
-
-        --ring: 212.7 26.8% 83.9%;
+        --color-background: #ffffff;
+        --color-foreground: #0a1629;
+    
+        --color-muted: #d3d3d3;
+        --color-muted-foreground: #6f5f7c;
+    
+        --color-popover: #ffffff;
+        --color-popover-foreground: #0a1629;
+    
+        --color-card: #ffffff;
+        --color-card-foreground: #0a1629;
+    
+        --color-border: #bec4d8;
+        --color-input: #bec4d8;
+    
+        --color-primary: #121229;
+        --color-primary-foreground: #d3d3ff;
+    
+        --color-secondary: #d3d3d3;
+        --color-secondary-foreground: #121229;
+    
+        --color-accent: #d3d3d3;
+        --color-accent-foreground: #121229;
+    
+        --color-destructive: #ff4236;
+        --color-destructive-foreground: #d3d3ff;
+    
+        --color-ring: #0a1629;
     }
 
     * {
@@ -72,11 +94,10 @@
     }
 
     html {
-        font-size: 18px;
-        @apply bg-background text-foreground;
+        @apply bg-gold-50 text-gray-950 text-[14px] lg:text-[18px];
     }
 
     body {
-        font-family: 'Montserrat', system-ui, sans-serif;
+        @apply font-montserrat antialiased
     }
 }

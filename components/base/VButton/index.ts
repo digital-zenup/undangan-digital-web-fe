@@ -8,37 +8,33 @@ export const buttonVariants = cva(
     {
         variants: {
             variant: {
-                default:
-          'bg-primary text-primary-foreground shadow hover:bg-primary/90',
-                destructive:
-          'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
-                outline:
-          'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
-                secondary:
-          'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
-                ghost: 'hover:bg-accent hover:text-accent-foreground',
+                default: 'bg-slate-900 text-gray-50 hover:bg-slate-900/90',
+                destructive: 'bg-red-500 text-gray-50 hover:bg-red-500/80',
+                outline: 'border border-input bg-background hover:bg-accent hover:text-gray-50',
+                secondary: 'bg-gray-400 text-gray-100 hover:text-gray-900 hover:bg-gray-400/80',
+                ghost: 'hover:bg-accent hover:text-gray-100',
                 link: 'text-primary underline-offset-4 hover:underline',
-                unstyled: 'all-[unset] w-fit !p-0',
+                success: 'bg-green-500 text-gray-50 hover:bg-green-500/80',
+                unstyled: 'all-[unset] w-fit h-fit !p-0',
             },
             size: {
-                default: 'h-9 px-4 py-2',
-                sm: 'h-8 rounded-md px-3 text-xs',
-                lg: 'h-10 rounded-md px-8',
-                icon: 'h-9 w-9',
+                sm: 'h-8 px-3 text-sm',
+                md: 'h-10 px-4 text-base',
+                lg: 'h-12 px-6 text-lg',
             },
         },
         defaultVariants: {
             variant: 'default',
-            size: 'default',
+            size: 'md',
         },
     },
 );
 
 export type Props = {
-    variant?: ButtonVariants['variant'];
+    variant: ButtonVariants['variant'];
     size?: ButtonVariants['size'];
+    type: HTMLButtonElement['type'];
     class?: HTMLAttributes['class'];
-    type?: HTMLButtonElement['type'];
 };
 
 type ButtonVariants = VariantProps<typeof buttonVariants>;

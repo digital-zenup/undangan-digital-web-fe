@@ -1,75 +1,87 @@
-# Nuxt Minimal Starter
+# Zen.UP - Online Digital Invitations
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Prerequisites
 
-## Setup
+Before you begin, ensure you have the following installed:
 
-Make sure to install dependencies:
+- [Node](https://nodejs.org/) (v20 or later)
+- [Bun](https://bun.sh/) (latest version)
+
+Optional, but recommended:
+
+- [Git](https://git-scm.com/) for version control
+- [VS Code](https://code.visualstudio.com/) or any modern IDE with Vue.js support
+
+## Installation
+
+1. **Clone the repository**
 
 ```bash
-# npm
-npm install
+git clone https://github.com/digital-zenup/undangan-digital-web-fe.git
+cd undangan-digital-web-fe
+```
 
-# pnpm
-pnpm install
+2. **Install the dependencies using pnpm**
 
-# yarn
-yarn install
-
-# bun
+```bash
 bun install
 ```
 
-## Development Server
+## Deps Installation
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
+1. **Update Deps**
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+bun deps:major
+bun deps:major-up
 ```
 
-Locally preview production build:
+## Development
+
+1. **Start the development server**:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+bun dev
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+2. **Access the application**
+
+    Open your browser and navigate to http://localhost:8000.
+
+## Commit
+
+To make a commit, use the following command:
+
+```bash
+git add <your-file>
+bun commit
+git push origin
+```
+
+## Linting and Formatting
+
+To maintain code quality, run linting and formatting commands:
+
+```bash
+bun lint
+bun lint:fix
+```
+
+## Project Structure
+
+The project structure is as follows:
+
+```
+project-root/
+|--- assets/                    # Static assets such as images used in the application (Styles, Icon).
+|--- components/          # Vue components that can be reused across the application.
+    |--- base/                  # Base components are generic components that are used across the application. They are typically not specific to a particular page or feature.
+    |--- modules/           # Partial components that are used on specific pages or features. Modules are typically more complex than base components and may contain multiple components. and act as partials on pages section
+|--- constants/              # Files containing constant values like configurations, action names, or API endpoints.
+|--- layouts/                 # Vue components that define the layout of a page
+|--- pages/                   # Vue components that define routes and route parameters
+|--- public/                  # Directory for static files accessible by users, like robots.txt or favicon.ico
+|--- server/                  # Contains server-side logic, APIs, and backend configurations
+|--- types/                   # Directory for storing type definitions for the application.
+|--- utils/                    # Utility functions, helpers, and tooling for the application
+```

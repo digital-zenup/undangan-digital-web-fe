@@ -1,93 +1,93 @@
 {
-  // Editor
-  "editor.formatOnSave": true,
-  "editor.tabSize": 4,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "always",
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
-  },
-  // Prettier
-  "prettier.enable": false,
-  "prettier.semi": true,
-  "prettier.tabWidth": 4,
-  "prettier.singleQuote": true,
-  // Eslint
-  "eslint.format.enable": true,
-  "eslint.useFlatConfig": true,
-  "eslint.rules.customizations": [
-    {
-      "rule": "style/*",
-      "severity": "off"
+    // Editor
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "never"
     },
-    {
-      "rule": "format/*",
-      "severity": "off"
+    // Prettier
+    "prettier.enable": false,
+    "prettier.semi": true,
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    // Eslint
+    "eslint.format.enable": true,
+    "eslint.useFlatConfig": true,
+    "eslint.rules.customizations": [
+        {
+            "rule": "style/*",
+            "severity": "off"
+        },
+        {
+            "rule": "format/*",
+            "severity": "off"
+        },
+        {
+            "rule": "*-indent",
+            "severity": "off"
+        },
+        {
+            "rule": "*-spacing",
+            "severity": "off"
+        },
+        {
+            "rule": "*-spaces",
+            "severity": "off"
+        },
+        {
+            "rule": "*-order",
+            "severity": "off"
+        },
+        {
+            "rule": "*-dangle",
+            "severity": "off"
+        },
+        {
+            "rule": "*-newline",
+            "severity": "off"
+        },
+        {
+            "rule": "*quotes",
+            "severity": "off"
+        },
+        {
+            "rule": "*semi",
+            "severity": "off"
+        }
+    ],
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "html",
+        "markdown",
+        "json",
+        "jsonc",
+        "yaml"
+    ],
+    "css.lint.unknownAtRules": "ignore",
+    "scss.lint.unknownAtRules": "ignore",
+    "[vue]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    {
-      "rule": "*-indent",
-      "severity": "off"
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    {
-      "rule": "*-spacing",
-      "severity": "off"
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    {
-      "rule": "*-spaces",
-      "severity": "off"
+    "[yaml]": {
+        "editor.tabSize": 4
     },
-    {
-      "rule": "*-order",
-      "severity": "off"
+    "[json]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-    {
-      "rule": "*-dangle",
-      "severity": "off"
-    },
-    {
-      "rule": "*-newline",
-      "severity": "off"
-    },
-    {
-      "rule": "*quotes",
-      "severity": "off"
-    },
-    {
-      "rule": "*semi",
-      "severity": "off"
+    "[jsonc]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     }
-  ],
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml"
-  ],
-  "css.lint.unknownAtRules": "ignore",
-  "scss.lint.unknownAtRules": "ignore",
-  "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[yaml]": {
-    "editor.tabSize": 4
-  },
-  "[json]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  }
 }

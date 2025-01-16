@@ -1,25 +1,28 @@
 <script lang="ts" setup>
-import { textVariants, type Props } from ".";
+import { type Props, textVariants } from '.';
 
 const props = withDefaults(defineProps<Props>(), {
-  bold: false,
-  italic: false,
+    bold: false,
+    italic: false,
 });
 
 const variant = computed(() =>
-  cn(
-    textVariants({
-      variant: props.variant,
-      bold: props.bold,
-      italic: props.italic,
-    }),
-    props.class
-  )
+    cn(
+        textVariants({
+            variant: props.variant,
+            bold: props.bold,
+            italic: props.italic,
+        }),
+        props.class,
+    ),
 );
 </script>
 
 <template>
-  <component :is="as" :class="variant">
-    <slot />
-  </component>
+    <component
+        :is="as"
+        :class="variant"
+    >
+        <slot />
+    </component>
 </template>

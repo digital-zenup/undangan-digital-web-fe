@@ -4,21 +4,13 @@ import { cva, type VariantProps } from 'class-variance-authority';
 export const textVariants = cva('font-normal font-Montserrat', {
     variants: {
         variant: {
-            h1: 'text-4xl',
-            h2: 'text-3xl',
-            h3: 'text-2xl',
-            h4: 'text-xl',
-            h5: 'text-lg',
-            body: 'text-base',
-            subbody: 'text-sm',
-        },
-        leading: {
-            none: 'leading-none',
-            tight: 'leading-tight',
-            snug: 'leading-snug',
-            normal: 'leading-normal',
-            relaxed: 'leading-relaxed',
-            loose: 'leading-loose',
+            h1: 'text-[2.5rem] md:text-[3.056rem] leading-tight',
+            h2: 'text-[2rem] md:text-[2.444rem] leading-tight',
+            h3: 'text-[1.5rem] md:text-[1.944rem] leading-tight',
+            h4: 'text-[1.25rem] md:text-[1.556rem] leading-tight',
+            h5: 'text-[1rem] md:text-[1.278rem] leading-tight',
+            body: 'text-[1rem] leading-relaxed',
+            subbody: 'text-[0.778rem] leading-relaxed',
         },
         color: {
             primary: 'text-primary',
@@ -44,7 +36,6 @@ export const textVariants = cva('font-normal font-Montserrat', {
     },
     defaultVariants: {
         color: 'primary',
-        leading: 'normal',
     },
 });
 
@@ -52,7 +43,6 @@ export type Props = {
     as: keyof HTMLElementTagNameMap;
     variant: TextVariants['variant'];
     color?: TextVariants['color'];
-    leading?: TextVariants['leading'];
     weight?: TextVariants['weight'];
     class?: HTMLAttributes['class'];
 };

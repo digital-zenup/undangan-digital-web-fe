@@ -16,6 +16,7 @@ export const buttonVariants = cva(
                 link: 'text-primary underline-offset-4 hover:underline',
                 success: 'bg-green-500 text-gray-50 hover:bg-green-500/80',
                 unstyled: 'all-[unset] w-fit h-fit !p-0',
+                gradation: 'bg-gradient-to-br from-[#18B26B] to-[#3A94E8] text-gold-50 hover:bg-red-500',
             },
             size: {
                 sm: 'h-8 px-3 text-sm',

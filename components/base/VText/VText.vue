@@ -8,7 +8,6 @@ const variant = computed(() =>
         textVariants({
             variant: props.variant,
             color: props.color,
-            leading: props.leading,
             weight: props.weight,
         }),
         props.class,

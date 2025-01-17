@@ -4,7 +4,7 @@ import { NAVIGATION_LINKS } from '~/constants';
 
 <template>
     <nav class="bg-gold-50">
-        <div class="container mx-auto px-8 py-6 flex flex-row items-center justify-between">
+        <div class="container py-6 flex flex-row items-center justify-between">
             <div class="w-full">
                 <Icon
                     name="zenup:zenup-logo"

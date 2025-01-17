@@ -9,6 +9,7 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxtjs/tailwindcss',
         '@vueuse/nuxt',
+        '@nuxtjs/i18n',
     ],
 
     devtools: {
@@ -67,6 +68,10 @@ export default defineNuxtConfig({
                 ital: [100, 200, 300, 400, 500, 600, 700, 800, 900],
             },
         },
+    },
+
+    i18n: {
+        vueI18n: './i18n.config.ts',
     },
 
     experimental: { appManifest: false },

@@ -89,5 +89,8 @@
     },
     "[jsonc]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    }
+    },
+    "i18n-ally.localesPaths": [
+        "locales"
+    ]
 }

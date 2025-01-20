@@ -3,13 +3,15 @@
 export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
     modules: [
-        '@nuxt/eslint',
-        '@nuxtjs/google-fonts',
-        '@nuxt/icon',
-        '@nuxt/image',
-        '@nuxtjs/tailwindcss',
-        '@vueuse/nuxt',
-        '@nuxtjs/i18n',
+      '@nuxt/eslint',
+      '@nuxtjs/google-fonts',
+      '@nuxt/icon',
+      '@nuxt/image',
+      '@nuxtjs/tailwindcss',
+      '@vueuse/nuxt',
+      '@nuxtjs/i18n',
+      'vue3-carousel-nuxt',
+      '@nuxt/content',
     ],
 
     devtools: {
@@ -72,6 +74,10 @@ export default defineNuxtConfig({
 
     i18n: {
         vueI18n: './i18n.config.ts',
+    },
+
+    carousel: {
+        prefix: 'VLib',
     },
 
     experimental: { appManifest: false },

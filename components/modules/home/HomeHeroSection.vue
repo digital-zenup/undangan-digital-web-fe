@@ -49,7 +49,7 @@ const { t } = useI18n();
             <div class="max-w-lg">
                 <NuxtImg
                     src="/images/home-hero-banner.webp"
-                    :alt="t('home.hero.imageAlt')"
+                    :alt="t('home.imageAlt')"
                     loading="lazy"
                     format="webp"
                     quality="50"

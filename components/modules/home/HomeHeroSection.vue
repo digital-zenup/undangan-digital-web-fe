@@ -5,24 +5,14 @@ const { t } = useI18n();
 <template>
     <section class="container flex flex-col lg:flex-row items-center justify-between gap-y-8 p-8">
         <div class="w-full max-w-lg lg:max-w-full flex flex-col items-center lg:items-start gap-y-4 mx-auto text-center lg:text-start">
-            <span>
-                <VText
-                    as="h1"
-                    variant="h1"
-                    weight="bold"
-                    class="italic text-green-700"
-                >
-                    {{ t('home.hero.heading.line1') }}
-                </VText>
-
-                <VText
-                    as="h1"
-                    variant="h1"
-                    weight="bold"
-                >
-                    {{ t('home.hero.heading.line2') }}
-                </VText>
-            </span>
+            <VText
+                as="h1"
+                variant="h1"
+                weight="bold"
+            >
+                <span class="italic text-green-700 block">{{ t('home.hero.heading.line1') }}</span>
+                <span class="block">{{ t('home.hero.heading.line2') }}</span>
+            </VText>
 
             <VText
                 as="p"
@@ -31,18 +21,13 @@ const { t } = useI18n();
                 {{ t('home.hero.description') }}
             </VText>
 
-            <NuxtLink
-                class="block"
+            <VLink
+                variant="gradation"
+                size="lg"
                 :to="{ name: 'index' }"
             >
-                <VButton
-                    type="button"
-                    variant="gradation"
-                    size="lg"
-                >
-                    {{ t('home.hero.cta') }}
-                </VButton>
-            </NuxtLink>
+                {{ t('home.hero.cta') }}
+            </VLink>
         </div>
 
         <div class="w-full flex flex-col items-center lg:items-end">

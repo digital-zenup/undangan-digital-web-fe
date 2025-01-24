@@ -1,7 +1,11 @@
 <script lang="ts" setup>
 import { buttonVariants, type Props } from '.';
 
-const { type = 'button', ...props } = defineProps<Props>();
+const {
+    as = 'button',
+    type = 'button',
+    ...props
+} = defineProps<Props>();
 
 const variant = computed(() =>
     cn(
@@ -9,17 +13,23 @@ const variant = computed(() =>
             variant: props.variant,
             size: props.size,
         }),
-        props.class,
         'font-semibold',
     ),
+);
+
+const buttonType = computed(() =>
+    as === 'button'
+        ? type
+        : undefined,
 );
 </script>
 
 <template>
-    <button
-        :type="type"
+    <component
+        :is="as"
+        :type="buttonType"
         :class="variant"
     >
         <slot />
-    </button>
+    </component>
 </template>

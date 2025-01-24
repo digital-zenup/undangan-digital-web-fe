@@ -3,15 +3,16 @@
 export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
     modules: [
-      '@nuxt/eslint',
-      '@nuxtjs/google-fonts',
-      '@nuxt/icon',
-      '@nuxt/image',
-      '@nuxtjs/tailwindcss',
-      '@vueuse/nuxt',
-      '@nuxtjs/i18n',
-      'vue3-carousel-nuxt',
-      '@nuxt/content',
+        '@nuxt/eslint',
+        '@nuxtjs/google-fonts',
+        '@nuxt/icon',
+        '@nuxt/image',
+        '@nuxtjs/tailwindcss',
+        '@vueuse/nuxt',
+        '@nuxtjs/i18n',
+        'vue3-carousel-nuxt',
+        '@nuxt/content',
+        'nuxt-tiptap-editor',
     ],
 
     devtools: {
@@ -78,6 +79,10 @@ export default defineNuxtConfig({
 
     carousel: {
         prefix: 'VLib',
+    },
+
+    tiptap: {
+        prefix: 'VLibTiptap',
     },
 
     experimental: { appManifest: false },

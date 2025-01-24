@@ -54,6 +54,7 @@
         "eslint-plugin-format": "^1.0.1",
         "husky": "^9.1.7",
         "lint-staged": "^15.4.0",
+        "nuxt-tiptap-editor": "^2.1.4",
         "sass-embedded": "^1.83.4",
         "tailwind-merge": "^2.6.0",
         "tailwindcss-animate": "^1.0.7",

@@ -13,13 +13,11 @@
 
         <slot />
 
-        <NuxtLink to="/">
-            <VButton
-                type="button"
-                variant="default"
-            >
-                Back to Home
-            </VButton>
-        </NuxtLink>
+        <VLink
+            :to="{ name: 'index' }"
+            variant="default"
+        >
+            Back to Home
+        </VLink>
     </main>
 </template>

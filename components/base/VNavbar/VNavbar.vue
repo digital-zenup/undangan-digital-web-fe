@@ -31,32 +31,30 @@ import { NAVIGATION_LINKS } from '~/constants';
                         v-for="link in NAVIGATION_LINKS"
                         :key="link.hrefName"
                     >
-                        <NuxtLink
+                        <VLink
                             :to="{ name: link.hrefName }"
                             class="font-semibold"
                             active-class="text-success"
+                            variant="unstyled"
                         >
                             {{ link.name }}
-                        </NuxtLink>
+                        </VLink>
                     </li>
                 </ul>
 
-                <NuxtLink :to="{ name: 'login' }">
-                    <VText
-                        as="span"
-                        variant="body"
-                        weight="semibold"
-                    >
-                        Login
-                    </VText>
-                </NuxtLink>
+                <VLink
+                    variant="unstyled"
+                    :to="{ name: 'login' }"
+                >
+                    Login
+                </VLink>
 
-                <VButton
-                    type="button"
+                <VLink
                     variant="success"
+                    :to="{ name: 'index' }"
                 >
                     Buat Undangan
-                </VButton>
+                </VLink>
             </div>
         </div>
     </nav>

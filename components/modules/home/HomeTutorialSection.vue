@@ -55,7 +55,6 @@ import { TUTORIAL_STEPS } from '~/constants';
                 loading="lazy"
                 format="webp"
                 quality="50"
-                class="drop-shadow-2xl"
             />
         </div>
     </section>

@@ -1,9 +1,20 @@
 <script setup lang="ts">
 import { NAVIGATION_LINKS } from '~/constants';
+
+const { y } = useWindowScroll();
+const isSticky = computed(() => y.value > 50);
+const navbarClass = computed(() =>
+    cn(
+        'bg-gold-50 transition-shadow duration-500 ease-in-out',
+        {
+            'shadow-navbar': isSticky.value,
+        },
+    ),
+);
 </script>
 
 <template>
-    <nav class="bg-gold-50">
+    <nav :class="navbarClass">
         <div class="container py-6 flex flex-row items-center justify-between">
             <div class="w-full">
                 <Icon

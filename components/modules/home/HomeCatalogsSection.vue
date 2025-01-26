@@ -21,7 +21,7 @@ import {
                     <NuxtImg
                         :src="`/images/catalogs/catalogue-${slide}.webp`"
                         class="rounded-xl"
-                        :alt="`Wedding invitation design on page ${slide}, featuring elegant floral patterns and modern typography`"
+                        :alt="`Desain undangan pernikahan di halaman ${slide}, menampilkan pola bunga elegan dan tipografi modern`"
                         loading="lazy"
                         format="webp"
                         quality="50"

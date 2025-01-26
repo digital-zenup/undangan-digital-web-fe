@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-const { t } = useI18n();
-</script>
-
 <template>
     <section class="container flex flex-col lg:flex-row items-center justify-between gap-y-8 p-8">
         <div class="w-full max-w-lg lg:max-w-full flex flex-col items-center lg:items-start gap-y-4 mx-auto text-center lg:text-start">
@@ -10,15 +6,15 @@ const { t } = useI18n();
                 variant="h1"
                 weight="bold"
             >
-                <span class="italic text-green-700 block">{{ t('home.hero.heading.line1') }}</span>
-                <span class="block">{{ t('home.hero.heading.line2') }}</span>
+                <span class="italic text-green-700 block">Not just invites</span>
+                <span class="block">It's your story</span>
             </VText>
 
             <VText
                 as="p"
                 variant="body"
             >
-                {{ t('home.hero.description') }}
+                Undang teman dan keluarga terdekat dengan cara spesial dengan membuat undangan online secara unik dan menarik. Coba sekarang juga
             </VText>
 
             <VLink
@@ -26,7 +22,7 @@ const { t } = useI18n();
                 size="lg"
                 :to="{ name: 'index' }"
             >
-                {{ t('home.hero.cta') }}
+                Yuk!! Buat Undangan
             </VLink>
         </div>
 
@@ -34,7 +30,7 @@ const { t } = useI18n();
             <div class="max-w-lg">
                 <NuxtImg
                     src="/images/home-hero-banner.webp"
-                    :alt="t('home.imageAlt')"
+                    alt="Undangan Online yang Mudah dan Cepat Dibuat dalam 5 Menit"
                     loading="lazy"
                     format="webp"
                     quality="50"

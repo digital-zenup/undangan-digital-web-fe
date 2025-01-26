@@ -10,3 +10,9 @@ export type CarouselBreakpoint = {
         gap: number;
     };
 };
+
+export type TutorialStep = {
+    title: string;
+    description: string;
+    iconName: string;
+};

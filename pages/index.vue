@@ -12,4 +12,5 @@ useSeoMeta({
 <template>
     <HomeHeroSection />
     <HomeCatalogsSection />
+    <HomeTutorialSection />
 </template>

@@ -15,6 +15,12 @@ export default defineNuxtConfig({
         'radix-vue/nuxt',
     ],
 
+    routeRules: {
+        '/': {
+            prerender: true,
+        },
+    },
+
     devtools: {
         enabled: true,
     },

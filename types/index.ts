@@ -11,7 +11,7 @@ export type CarouselBreakpoint = {
     };
 };
 
-export type TutorialStep = {
+export type Feature = {
     title: string;
     description: string;
     iconName: string;

@@ -14,6 +14,7 @@ const variant = computed(() =>
             size: props.size,
         }),
         'font-semibold',
+        props.class,
     ),
 );
 

@@ -1,7 +1,6 @@
+import type { NuxtLink } from '#components';
 import type { HTMLAttributes } from 'vue';
 import { cva, type VariantProps } from 'class-variance-authority';
-
-export { default as VButton } from './VButton.vue';
 
 export const buttonVariants = cva(
     'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
@@ -10,7 +9,7 @@ export const buttonVariants = cva(
             variant: {
                 default: 'bg-slate-900 text-gray-50 hover:bg-slate-900/90',
                 destructive: 'bg-red-500 text-gray-50 hover:bg-red-500/80',
-                outline: 'border border-input bg-background hover:bg-accent hover:text-gray-50',
+                outline: 'border border-success bg-background hover:bg-green-500 hover:text-gray-50',
                 secondary: 'bg-gray-400 text-gray-100 hover:text-gray-900 hover:bg-gray-400/80',
                 ghost: 'hover:bg-accent hover:text-gray-100',
                 link: 'text-primary underline-offset-4 hover:underline',
@@ -34,8 +33,9 @@ export const buttonVariants = cva(
 export type Props = {
     variant: ButtonVariants['variant'];
     size?: ButtonVariants['size'];
-    type: HTMLButtonElement['type'];
+    type?: HTMLButtonElement['type'];
     class?: HTMLAttributes['class'];
+    as?: 'button' | typeof NuxtLink;
 };
 
-type ButtonVariants = VariantProps<typeof buttonVariants>;
+export type ButtonVariants = VariantProps<typeof buttonVariants>;

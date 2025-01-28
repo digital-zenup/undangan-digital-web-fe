@@ -1,9 +1,20 @@
 <script setup lang="ts">
 import { NAVIGATION_LINKS } from '~/constants';
+
+const { y } = useWindowScroll();
+const isSticky = computed(() => y.value > 50);
+const navbarClass = computed(() =>
+    cn(
+        'bg-gold-50 transition-shadow duration-500 ease-in-out',
+        {
+            'shadow-navbar': isSticky.value,
+        },
+    ),
+);
 </script>
 
 <template>
-    <nav class="bg-gold-50">
+    <nav :class="navbarClass">
         <div class="container py-6 flex flex-row items-center justify-between">
             <div class="w-full">
                 <Icon
@@ -31,32 +42,30 @@ import { NAVIGATION_LINKS } from '~/constants';
                         v-for="link in NAVIGATION_LINKS"
                         :key="link.hrefName"
                     >
-                        <NuxtLink
+                        <VLink
                             :to="{ name: link.hrefName }"
                             class="font-semibold"
                             active-class="text-success"
+                            variant="unstyled"
                         >
                             {{ link.name }}
-                        </NuxtLink>
+                        </VLink>
                     </li>
                 </ul>
 
-                <NuxtLink :to="{ name: 'login' }">
-                    <VText
-                        as="span"
-                        variant="body"
-                        weight="semibold"
-                    >
-                        Login
-                    </VText>
-                </NuxtLink>
+                <VLink
+                    variant="unstyled"
+                    :to="{ name: 'login' }"
+                >
+                    Login
+                </VLink>
 
-                <VButton
-                    type="button"
+                <VLink
                     variant="success"
+                    :to="{ name: 'index' }"
                 >
                     Buat Undangan
-                </VButton>
+                </VLink>
             </div>
         </div>
     </nav>

@@ -12,8 +12,15 @@ export default defineNuxtConfig({
         '@nuxtjs/i18n',
         'vue3-carousel-nuxt',
         '@nuxt/content',
+        'radix-vue/nuxt',
         'nuxt-tiptap-editor',
     ],
+
+    routeRules: {
+        '/': {
+            prerender: true,
+        },
+    },
 
     devtools: {
         enabled: true,
@@ -73,11 +80,11 @@ export default defineNuxtConfig({
         },
     },
 
-    i18n: {
-        vueI18n: './i18n.config.ts',
+    carousel: {
+        prefix: 'VLib',
     },
 
-    carousel: {
+    radix: {
         prefix: 'VLib',
     },
 

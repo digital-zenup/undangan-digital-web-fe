@@ -40,7 +40,23 @@ export const textVariants = cva('font-normal font-Montserrat', {
 });
 
 export type Props = {
-    as: keyof HTMLElementTagNameMap;
+    as:
+        | 'p'
+        | 'h1'
+        | 'h2'
+        | 'h3'
+        | 'h4'
+        | 'h5'
+        | 'h6'
+        | 'span'
+        | 'li'
+        | 'label'
+        | 'abbr'
+        | 'time'
+        | 'blockquote'
+        | 'cite'
+        | 'code'
+        | 'pre';
     variant: TextVariants['variant'];
     color?: TextVariants['color'];
     weight?: TextVariants['weight'];

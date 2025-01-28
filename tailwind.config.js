@@ -14,6 +14,9 @@ export default {
             },
         },
         extend: {
+            boxShadow: {
+                navbar: '0px 5px 40px rgba(10, 10, 10, 0.1)',
+            },
             fontFamily: {
                 lato: ['Lato', 'sans-serif'],
                 libre: ['Libre Baskerville', 'sans-serif'],

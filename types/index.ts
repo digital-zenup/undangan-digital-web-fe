@@ -16,3 +16,11 @@ export type Feature = {
     description: string;
     iconName: string;
 };
+
+export type PricingPlan = {
+    label: 'basic' | 'popular choice';
+    plan: 'lite' | 'premium';
+    description: string;
+    price: string;
+    features: string[];
+};

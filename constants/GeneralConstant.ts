@@ -1,4 +1,4 @@
-import type { Feature, NavigationLink } from '~/types';
+import type { Feature, NavigationLink, PricingPlan } from '~/types';
 
 export const NAVIGATION_LINKS: NavigationLink[] = [
     {
@@ -91,5 +91,43 @@ export const FEATURES: Feature[] = [
         title: 'Share Undangan',
         description: 'Kamu bisa share undangan kamu kepada tamu undangan dengan mudah dan cepat',
         iconName: 'uil-share-alt',
+    },
+] as const;
+
+export const PRICING_PLANS: PricingPlan[] = [
+    {
+        label: 'basic',
+        plan: 'lite',
+        description: 'Paket untuk kamu yang hanya ingin menyebarkan informasi undangan',
+        price: 'Rp. 85.000',
+        features: [
+            'Desain undangan Standar',
+            'Countdown hari',
+            'Galeri foto (Max: 4)',
+            'Background music (Daftar musik dari zen.up)',
+            'Navigasi lokasi akurat',
+            'Menambahkan acara ke google calendar',
+            'Masa aktif 6 Bulan',
+            'Edit kalimat undangan',
+        ],
+    },
+    {
+        label: 'popular choice',
+        plan: 'premium',
+        description: 'Paket untuk kamu yang hanya ingin menyebarkan informasi undangan',
+        price: 'Rp. 115.000',
+        features: [
+            'Desain undangan Premium',
+            'Countdown hari',
+            'Galeri foto (Unlimited)',
+            'Background music (bebas kustom)',
+            'Navigasi lokasi akurat',
+            'Menambahkan acara ke google calander',
+            'Masa aktif selamanya',
+            'Edit kalimat undangan',
+            'Custom Domain',
+            'Buku Tamu',
+            'RSVP (Konfirmasi Kehadiran)',
+        ],
     },
 ] as const;
